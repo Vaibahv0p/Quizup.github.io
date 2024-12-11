@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
 
+    <!-- Home Section -->
+    <div id="home" class="section">
+        <h1>Welcome to the Quiz Game!</h1>
+        <p>Test your knowledge with our interactive quiz.</p>
+        <button class="btn" onclick="showSection('explanation')">Continue</button>
+    </div>
+
+    <!-- Explanation Section -->
+    <div id="explanation" class="section" style="display: none;">
+        <h1>Quiz Rules & Instructions</h1>
+        <ul>
+            <li>Each question has one correct answer.</li>
+            <li>Choose the correct option to proceed.</li>
+            <li>Your final streak will be displayed at the end.</li>
+        </ul>
+        <button class="btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz" class="section" style="display: none;">
+        <h1>Quiz Game</h1>
+        <div id="question" class="question"></div>
+        <ul id="options" class="options-list"></ul>
+        <p id="streak">Current Streak: 0</p>
+        <p id="result"></p>
+    </div>
+
+    <!-- Footer with a submit button -->
+    <div id="footer">
+        <button id="submitBtn" class="btn" onclick="submitAnswer()" style="display: none;">Next Question</button>
+    </div>
+
+</body>
+</html>
